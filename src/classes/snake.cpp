@@ -70,4 +70,39 @@ bool snake::checkColisionWithBoard()
     if (serpent[0].getY() == 0 || serpent[0].getY() == b->getYSize()-1) return TRUE;
     return FALSE;
 }
+/*
+bool snake::estegale(snake const a) const
+{
+
+    if(serpent[0].getX()==a.getX() && serpent[0].getY() == a.getY()) return TRUE;
+    
+    return FALSE;
+}
+*/
+bool snake::checkColisionWithSnake()
+{
+    for(int d = 1; d < longeur; d++)
+    {
+        if (serpent[0] == serpent[d]) return TRUE;
+    }
+    return FALSE;
+   
+}
+
+bool std::operator==(Point const a , Point const b) 
+{
+
+    if (a.getX() == b.getX() && a.getY() == b.getY()) 
+    {
+        return TRUE;
+        
+    }else{
+    
+        return FALSE;
+    }
+
+    
+}
+
+
 

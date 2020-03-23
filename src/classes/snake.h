@@ -38,6 +38,13 @@ public:
     */
     bool checkColisionWithBoard();
 
+    /** vérifie que le serpent ne se touche pas
+    * \return true en cas de collision
+    */
+    bool checkColisionWithSnake();
+    
+    
+    //bool estegale(snake const a) const;
 
 private:
     /** tableau de point, corps du serpent*/
@@ -45,3 +52,13 @@ private:
     /** longueur du serpent */
     int longeur = 3;
 };
+
+namespace std {
+
+    /** surchage de l'opérateur 
+     * Return true si a == b
+     */
+    bool operator==(Point const a , Point const b);
+
+}
+    

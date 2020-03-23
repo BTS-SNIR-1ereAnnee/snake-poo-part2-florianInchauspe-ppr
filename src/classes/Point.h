@@ -14,6 +14,10 @@ public:
     Point();
     /** Constructeur */
     Point(int x, int y);
+    
+    Point(char unChar);
+    
+    Point(int x, int y , char unChar);
 
     /** Default destructor */
     virtual ~Point();
@@ -65,11 +69,22 @@ public:
     *   Affiche les coordonnées
     */
     void debug();
+    
+    /** Access m_caractere
+     * \return The current value of m_caractere
+     */
+    char getChar();
+    
+    void setChar(char unChar);
+    
+   
+    
 protected:
 
 private:
     int m_x; //!< Member variable "m_x"
     int m_y; //!< Member variable "m_y"
+    char m_caractere ; //!< Member variable "m_caractere"
 };
 
 #endif // POINT_H
